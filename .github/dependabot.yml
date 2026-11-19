@@ -1,6 +1,6 @@
 version: 2
 registries:
-  dummy-registry:
+  artifactory:
     type: cargo-registry
     registry: artifactory
     url: "https://triala6oit3.jfrog.io/artifactory/api/cargo/cargorepo/index/""
@@ -10,6 +10,6 @@ updates:
   - package-ecosystem: "cargo"
     directory: "/"
     registries: 
-      - "dummy-registry"
+      - artifactory
     schedule:
       interval: "daily"
