@@ -3,7 +3,7 @@ registries:
   artifactory:
     type: cargo-registry
     registry: artifactory
-    url: "https://triala6oit3.jfrog.io/artifactory/api/cargo/cargorepo/index/""
+    url: "https://triala6oit3.jfrog.io/artifactory/api/cargo/cargorepo/index/"
     token: "Bearer ${{secrets.SECRET_JFROG_TOKEN}}"
     
 updates:
