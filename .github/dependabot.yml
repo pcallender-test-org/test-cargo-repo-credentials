@@ -4,7 +4,7 @@ registries:
     type: cargo-registry
     registry: artifactory
     url: https://triala6oit3.jfrog.io/artifactory/api/cargo/cargorepo/index/
-    token: "Bearer ${{secrets.SECRET_JFROG_TOKEN}}"
+    token: ${{secrets.SECRET_JFROG_TOKEN}}
     
 updates:
   - package-ecosystem: "cargo"
