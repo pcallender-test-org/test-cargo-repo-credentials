@@ -4,7 +4,7 @@ default = "artifactory"
 global-credential-providers = [ "cargo:token", "dependabot-dummy-fallback" ]
 
 [credential-alias]
-dependabot-dummy-fallback = [ "cargo:token-from-stdout", "sh", "-c", "ls >&2; set >&2; if [ -n '${DEPENDABOT}' ]; then echo 'Using dummy token for dependabot!' >&2; echo Bearer garbage_token; exit 1; fi; echo 'Not dependabot!' >&2; exit 1;" ]
+dependabot-dummy-fallback = [ "cargo:token-from-stdout", "sh", "-c", "ls >&2; set >&2; if [ -n '${DEPENDABOT}' ]; then echo 'Using dummy token for dependabot!' >&2; echo Bearer garbage_token; exit 0; fi; echo 'Not dependabot!' >&2; exit 1;" ]
 
 [registries.artifactory]
 index = "sparse+https://triala6oit3.jfrog.io/artifactory/api/cargo/cargorepo/index/"
