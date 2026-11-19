@@ -1,0 +1,14 @@
+# Makes artifactory the default registry and saves passing --registry parameter
+[registry]
+default = "artifactory"
+global-credential-providers = [ "cargo:token" ]
+
+[registries.artifactory]
+index = "sparse+https://triala6oit3.jfrog.io/artifactory/api/cargo/cargorepo/index/"
+
+# Add these 2 sections for resolving dependencies from Artifactory
+[source.artifactory-remote]
+registry = "sparse+https://triala6oit3.jfrog.io/artifactory/api/cargo/cargorepo/index/"
+
+[source.crates-io]
+replace-with = "artifactory-remote"
